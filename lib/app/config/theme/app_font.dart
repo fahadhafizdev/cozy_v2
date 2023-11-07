@@ -33,7 +33,7 @@ class AppFont {
 
   static TextStyle purpleTextStyle = GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
-    color: AppColor.main,
+    color: AppColor.mainColor,
   );
 
   static TextStyle regulerTextStyle = GoogleFonts.poppins(

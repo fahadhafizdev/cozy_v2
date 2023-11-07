@@ -3,7 +3,7 @@ import 'app_color.dart';
 
 class AppButtonStyle {
   static ButtonStyle btnMain = ElevatedButton.styleFrom(
-    backgroundColor: AppColor.main,
+    backgroundColor: AppColor.mainColor,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(17)),
     ),
