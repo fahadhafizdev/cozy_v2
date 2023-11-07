@@ -12,7 +12,9 @@ class AppButtonStyle {
   static ButtonStyle btnOrange = ElevatedButton.styleFrom(
     backgroundColor: AppColor.orange,
     shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(17)),
+      borderRadius: BorderRadius.all(
+        Radius.circular(17),
+      ),
     ),
   );
 }
