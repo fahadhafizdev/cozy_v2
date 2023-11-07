@@ -98,6 +98,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "graphs",
+      "rootUri": "file:///Users/hdextor/.pub-cache/hosted/pub.dev/graphs-2.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/hdextor/.pub-cache/hosted/pub.dev/http-0.13.6",
       "packageUri": "lib/",
@@ -216,6 +222,18 @@
       "rootUri": "file:///Users/hdextor/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "rive",
+      "rootUri": "file:///Users/hdextor/.pub-cache/hosted/pub.dev/rive-0.12.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "rive_common",
+      "rootUri": "file:///Users/hdextor/.pub-cache/hosted/pub.dev/rive_common-0.2.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "sky_engine",
@@ -344,7 +362,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-11-07T04:08:36.180753Z",
+  "generated": "2023-11-07T04:38:56.562607Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }
