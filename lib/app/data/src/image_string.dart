@@ -4,5 +4,5 @@ class ImageString {
   static String riveAssets = 'assets/rive_assets';
 
   static String iconFilter = '$icons/icon_cozy.png';
-  static String riveGlowBalls = '$riveAssets/6112-11891-glowballs.riv';
+  static String riveShape = '$riveAssets/shapes.riv';
 }

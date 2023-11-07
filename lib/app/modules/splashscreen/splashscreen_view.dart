@@ -10,7 +10,7 @@ class SplashScreenView extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          RiveAnimation.asset(ImageString.riveGlowBalls),
+          RiveAnimation.asset(ImageString.riveShape),
         ],
       ),
     );
