@@ -35,7 +35,7 @@ class SplashScreenContent extends StatelessWidget {
               width: 150.w,
               margin: const EdgeInsets.only(top: 40),
               isLoading: false,
-              func: () {},
+              func: () => Navigator.pushNamed(context, '/main-page'),
               text: 'Explore Now',
               btnStyle: AppButtonStyle.btnMain,
               fontWeight: AppFont.medium,

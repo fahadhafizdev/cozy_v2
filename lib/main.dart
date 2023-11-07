@@ -1,3 +1,4 @@
+import 'package:cozy_v2/app/modules/main_page/main_page.dart';
 import 'package:cozy_v2/app/modules/splashscreen/splashscreen_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
           initialRoute: '/',
           routes: {
             '/': (context) => const SplashScreenView(),
+            '/main-page': (context) => const MainPage(),
           },
         );
       },

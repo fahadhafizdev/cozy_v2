@@ -11,26 +11,33 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int pageNumber = 0;
+
+  void changePage(int newValue) {
+    pageNumber = newValue;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    int pageNumber = 0;
-
     Widget bottomItem({required String imageUrl, required int index}) {
       return GestureDetector(
-        onTap: () {},
+        behavior: HitTestBehavior.translucent,
+        onTap: () => changePage(index),
         child: Column(
           children: [
+            const Spacer(),
             SvgPicture.asset(
               imageUrl,
-              width: 26,
-              height: 26,
+              width: 20,
+              height: 20,
               color:
                   (index == pageNumber) ? AppColor.mainColor : AppColor.grey1,
             ),
             const Spacer(),
             (index == pageNumber)
                 ? Container(
-                    width: 30,
+                    width: 20,
                     height: 2,
                     decoration: BoxDecoration(
                       color: AppColor.mainColor,
@@ -65,9 +72,9 @@ class _MainPageState extends State<MainPage> {
         child: Container(
           height: 65,
           width: AppDimen.wInfinit,
-          margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           decoration: BoxDecoration(
-            color: AppColor.white,
+            color: AppColor.card,
             borderRadius: const BorderRadius.all(
               Radius.circular(23),
             ),
@@ -75,22 +82,10 @@ class _MainPageState extends State<MainPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              bottomItem(
-                imageUrl: ImageString.iconHome,
-                index: 0,
-              ),
-              bottomItem(
-                imageUrl: ImageString.iconMessage,
-                index: 1,
-              ),
-              bottomItem(
-                imageUrl: ImageString.iconNews,
-                index: 2,
-              ),
-              bottomItem(
-                imageUrl: ImageString.iconLove,
-                index: 3,
-              ),
+              bottomItem(imageUrl: ImageString.iconHome, index: 0),
+              bottomItem(imageUrl: ImageString.iconMessage, index: 1),
+              bottomItem(imageUrl: ImageString.iconNews, index: 2),
+              bottomItem(imageUrl: ImageString.iconLove, index: 3),
             ],
           ),
         ),
@@ -98,6 +93,7 @@ class _MainPageState extends State<MainPage> {
     }
 
     return Scaffold(
+      backgroundColor: AppColor.white,
       body: Stack(
         children: [
           buildContent(pageNumber),
