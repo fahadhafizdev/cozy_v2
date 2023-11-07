@@ -1,5 +1,6 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -54,7 +55,7 @@ class _MainPageState extends State<MainPage> {
     Widget buildContent(int value) {
       switch (value) {
         case 0:
-          return const SizedBox();
+          return const DashboardView();
         case 1:
           return const SizedBox();
         case 3:
