@@ -1,5 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
+import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -18,7 +20,7 @@ class _MainPageState extends State<MainPage> {
         onTap: () {},
         child: Column(
           children: [
-            Image.asset(
+            SvgPicture.asset(
               imageUrl,
               width: 26,
               height: 26,
@@ -74,19 +76,19 @@ class _MainPageState extends State<MainPage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               bottomItem(
-                imageUrl: 'assets/images/icon_home.png',
+                imageUrl: ImageString.iconHome,
                 index: 0,
               ),
               bottomItem(
-                imageUrl: 'assets/images/icon_mail.png',
+                imageUrl: ImageString.iconMessage,
                 index: 1,
               ),
               bottomItem(
-                imageUrl: 'assets/images/icon_card.png',
+                imageUrl: ImageString.iconNews,
                 index: 2,
               ),
               bottomItem(
-                imageUrl: 'assets/images/icon_love.png',
+                imageUrl: ImageString.iconLove,
                 index: 3,
               ),
             ],
