@@ -7,7 +7,7 @@ class DashboardHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 40, 0, 0),
+      padding: const EdgeInsets.fromLTRB(24, 40, 0, 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
