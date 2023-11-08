@@ -94,9 +94,7 @@ class SpaceCard extends StatelessWidget {
                       ),
                     ]),
               ),
-              SizedBox(
-                height: 16,
-              ),
+              16.0.height,
               Text(
                 '${space.city}, ${space.country}',
                 style: AppFont.greyTextStyle.copyWith(
