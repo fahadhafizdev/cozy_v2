@@ -53,7 +53,7 @@ class SpaceModel {
     ),
     SpaceModel(
       id: 2,
-      name: 'Sky Hotel Batu',
+      name: 'Skyfall Batu',
       imageUrl: ImageString.space2,
       price: 52,
       city: 'Batu',
@@ -70,7 +70,7 @@ class SpaceModel {
     ),
     SpaceModel(
       id: 3,
-      name: 'Rise Hotel',
+      name: 'Rise Cozy',
       imageUrl: ImageString.space3,
       price: 52,
       city: 'Malang',
