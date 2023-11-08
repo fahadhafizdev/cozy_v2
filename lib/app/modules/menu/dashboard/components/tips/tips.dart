@@ -1,5 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/config/extension/extension.dart';
+import 'package:cozy_v2/app/data/models/tips_model.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/tips/tips_card.dart';
 import 'package:flutter/material.dart';
 
 class Tips extends StatelessWidget {
@@ -18,6 +20,7 @@ class Tips extends StatelessWidget {
           ),
         ),
         16.0.height,
+        ...TipsModel.listTips.map((tips) => TipsCard(tips)),
         // TipsCard(
         //   Tips(
         //       id: 1,
