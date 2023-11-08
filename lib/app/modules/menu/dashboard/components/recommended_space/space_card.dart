@@ -1,6 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/modules/menu/space_detail/space_detail.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCard extends StatelessWidget {
@@ -101,12 +102,12 @@ class SpaceCard extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(24, 0, 12, 18),
       child: GestureDetector(
         onTap: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => DetailPage(space),
-          //   ),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SpaceDetail(space: space),
+            ),
+          );
         },
         child: Row(
           children: [
