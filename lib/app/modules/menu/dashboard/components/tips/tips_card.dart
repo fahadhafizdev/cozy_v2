@@ -27,7 +27,7 @@ class TipsCard extends StatelessWidget {
             ),
             Text(
               'Updated ${tips.updatedAt}',
-              style: lightTextStyle.copyWith(
+              style: AppFont.greyTextStyle.copyWith(
                 fontSize: 14,
               ),
             )
