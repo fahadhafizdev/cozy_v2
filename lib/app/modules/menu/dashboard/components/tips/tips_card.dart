@@ -1,3 +1,4 @@
+import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/config/extension/extension.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class TipsCard extends StatelessWidget {
           children: [
             Text(
               tips.title,
-              style: blackTextStyle.copyWith(
+              style: AppFont.blackTextStyle.copyWith(
                 fontSize: 18,
               ),
             ),
