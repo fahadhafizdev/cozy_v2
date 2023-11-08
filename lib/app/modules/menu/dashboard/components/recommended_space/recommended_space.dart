@@ -12,7 +12,7 @@ class RecommendedSpace extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 24),
+          padding: const EdgeInsets.fromLTRB(24, 12, 0, 16),
           child: Text(
             'Recommended Space',
             style: AppFont.blackTextStyle.copyWith(

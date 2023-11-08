@@ -9,13 +9,15 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        DashboardHeader(),
-        PopularCities(),
-        RecommendedSpace(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          DashboardHeader(),
+          PopularCities(),
+          RecommendedSpace(),
+        ],
+      ),
     );
   }
 }
