@@ -1,10 +1,11 @@
 import 'package:cozy_v2/app/config/config.dart';
+import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCard extends StatelessWidget {
-  final Space space;
-  SpaceCard(this.space);
+  final SpaceModel space;
+  const SpaceCard(this.space, {super.key});
 
   @override
   Widget build(BuildContext context) {

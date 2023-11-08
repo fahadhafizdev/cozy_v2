@@ -33,8 +33,8 @@ class SpaceModel {
     required this.numberOfCupBoards,
   });
 
-  static List<Space> listSpaces = [
-    Space(
+  static List<SpaceModel> listSpaces = [
+    SpaceModel(
       id: 1,
       name: 'kuratakeso hot',
       imageUrl: ImageString.space1,
@@ -51,7 +51,7 @@ class SpaceModel {
       numberOfBadrooms: 2,
       numberOfCupBoards: 3,
     ),
-    Space(
+    SpaceModel(
       id: 1,
       name: 'kuratakeso hot',
       imageUrl: ImageString.space1,
@@ -68,7 +68,7 @@ class SpaceModel {
       numberOfBadrooms: 2,
       numberOfCupBoards: 3,
     ),
-    Space(
+    SpaceModel(
       id: 1,
       name: 'kuratakeso hot',
       imageUrl: ImageString.space1,
@@ -85,7 +85,7 @@ class SpaceModel {
       numberOfBadrooms: 2,
       numberOfCupBoards: 3,
     ),
-    Space(
+    SpaceModel(
       id: 1,
       name: 'kuratakeso hot',
       imageUrl: ImageString.space1,
