@@ -1,4 +1,7 @@
+import 'package:cozy_v2/app/config/config.dart';
+import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class FavoritWidget extends StatefulWidget {
   const FavoritWidget({super.key});
@@ -11,26 +14,29 @@ class _FavoritWidgetState extends State<FavoritWidget> {
   bool _isFavorited = false;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: _toggleFavorite,
-      child: Image.asset(
-        _isFavorited
-            ? 'assets/images/btn_wishlist_red.png'
-            : 'assets/images/btn_wishlist.png',
-        width: 40,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _isFavorited = !_isFavorited;
+        });
+      },
+      child: Container(
         height: 40,
+        width: 40,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100),
+          color: AppColor.white,
+        ),
+        padding: const EdgeInsets.only(top: 2),
+        child: Center(
+          child: SvgPicture.asset(
+            ImageString.iconLove,
+            color: _isFavorited ? AppColor.red : null,
+            width: 20,
+            height: 20,
+          ),
+        ),
       ),
     );
-  }
-
-  void _toggleFavorite() {
-    setState(() {
-      // if (_isFavorited) {
-      //   _isFavorited = false;
-      // } else {
-      //   _isFavorited = true;
-      // }
-      _isFavorited = !_isFavorited;
-    });
   }
 }
