@@ -30,7 +30,7 @@ class _FavoritWidgetState extends State<FavoritWidget> {
         padding: const EdgeInsets.only(top: 2),
         child: Center(
           child: SvgPicture.asset(
-            ImageString.iconLove,
+            _isFavorited ? ImageString.iconLove : ImageString.iconLoveOutlane,
             color: _isFavorited ? AppColor.red : null,
             width: 20,
             height: 20,

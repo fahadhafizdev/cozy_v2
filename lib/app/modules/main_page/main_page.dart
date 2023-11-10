@@ -75,7 +75,7 @@ class _MainPageState extends State<MainPage> {
           width: AppDimen.wInfinit,
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           decoration: BoxDecoration(
-            color: AppColor.card,
+            color: AppColor.grey3,
             borderRadius: const BorderRadius.all(
               Radius.circular(23),
             ),

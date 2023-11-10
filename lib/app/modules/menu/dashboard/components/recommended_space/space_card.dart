@@ -101,6 +101,7 @@ class SpaceCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 0, 12, 18),
       child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
         onTap: () {
           Navigator.push(
             context,

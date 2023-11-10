@@ -1,6 +1,9 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/modules/menu/space_detail/components/dialog_book_now.dart';
+import 'package:cozy_v2/app/utils/util_show_dialog_tool.dart';
+import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import 'components/facility_item.dart';
@@ -149,24 +152,103 @@ class SpaceDetail extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: space.photos.map((item) {
-                return Container(
-                  margin: const EdgeInsets.only(left: 24),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      item,
-                      width: 110,
-                      height: 88,
-                      fit: BoxFit.cover,
+              children: [
+                ...space.photos.map(
+                  (item) => Container(
+                    margin: const EdgeInsets.only(left: 24),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        item,
+                        width: 110,
+                        height: 88,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                );
-              }).toList(),
+                ),
+                24.0.width,
+              ],
             ),
           ),
           30.0.height,
         ],
+      );
+    }
+
+    Widget location() {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 24),
+            child: Text(
+              'Location',
+              style: AppFont.blackTextStyle.copyWith(
+                fontSize: 16,
+              ),
+            ),
+          ),
+          6.0.height,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      space.address,
+                      style: AppFont.greyTextStyle.copyWith(
+                        fontSize: 14,
+                      ),
+                    ),
+                    2.0.height,
+                    Text(
+                      space.city,
+                      style: AppFont.greyTextStyle.copyWith(
+                        fontSize: 14,
+                      ),
+                    )
+                  ],
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // launchUrl(space.mapUrl);
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: AppColor.grey3,
+                    ),
+                    child: Icon(
+                      Icons.location_pin,
+                      color: AppColor.grey1,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          40.0.height,
+        ],
+      );
+    }
+
+    Widget btnBook() {
+      return SizedBox(
+        height: 50,
+        child: CustomButton(
+          margin: const EdgeInsets.symmetric(horizontal: 24),
+          isLoading: false,
+          func: () =>
+              UtilShowDialogTools().show(context, const DialogBookNow()),
+          text: 'Book Now',
+          btnStyle: AppButtonStyle.btnMain,
+        ),
       );
     }
 
@@ -191,70 +273,8 @@ class SpaceDetail extends StatelessWidget {
                   30.0.height,
                   mainFacility(),
                   photoPreview(),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 24),
-                    child: Text(
-                      'Location',
-                      style: AppFont.blackTextStyle.copyWith(
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  6.0.height,
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              space.address,
-                              style: AppFont.greyTextStyle.copyWith(
-                                fontSize: 14,
-                              ),
-                            ),
-                            2.0.height,
-                            Text(
-                              space.city,
-                              style: AppFont.greyTextStyle.copyWith(
-                                fontSize: 14,
-                              ),
-                            )
-                          ],
-                        ),
-                        // InkWell(
-                        //   onTap: () {
-                        //     // launchUrl(space.mapUrl);
-                        //   },
-                        //   child: Image.asset(
-                        //     'assets/images/btn_maps.png',
-                        //     width: 40,
-                        //     height: 40,
-                        //   ),
-                        // ),
-                      ],
-                    ),
-                  ),
-                  40.0.height,
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 24),
-                    height: 50,
-                    width: MediaQuery.of(context).size.width - (2 * 24),
-                    child: ElevatedButton(
-                      style: AppButtonStyle.btnMain,
-                      onPressed: () {
-                        // _showMyDialog();
-                      },
-                      child: Text(
-                        'Book Now',
-                        style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                  ),
+                  location(),
+                  btnBook(),
                   40.0.height,
                 ],
               ),
