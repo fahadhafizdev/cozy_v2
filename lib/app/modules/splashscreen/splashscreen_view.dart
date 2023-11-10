@@ -12,12 +12,20 @@ class SplashScreenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget housePicture() {
-      return Align(
-        alignment: Alignment.bottomRight,
-        child: Image.asset(
-          ImageString.house,
-          height: 433.h,
-        ),
+      return LayoutBuilder(
+        builder: (context, constraint) {
+          if (constraint.maxWidth <= 700) {
+            return Align(
+              alignment: Alignment.bottomRight,
+              child: Image.asset(
+                ImageString.house,
+                height: 433.h,
+              ),
+            );
+          } else {
+            return const SizedBox.shrink();
+          }
+        },
       );
     }
 
@@ -33,18 +41,26 @@ class SplashScreenView extends StatelessWidget {
     Widget riveShape() {
       return SizedBox(
         width: AppDimen.wInfinit,
-        child: RiveAnimation.asset(ImageString.riveShape),
+        child: RiveAnimation.asset(ImageString.riveShape, fit: BoxFit.cover),
       );
     }
 
     Widget orangeBox() {
-      return Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          height: 100.h,
-          width: AppDimen.wInfinit,
-          color: AppColor.orange.withOpacity(0.5),
-        ),
+      return LayoutBuilder(
+        builder: (context, constraint) {
+          if (constraint.maxWidth <= 700) {
+            return Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                height: 100.h,
+                width: AppDimen.wInfinit,
+                color: AppColor.orange.withOpacity(0.5),
+              ),
+            );
+          } else {
+            return const SizedBox.shrink();
+          }
+        },
       );
     }
 
