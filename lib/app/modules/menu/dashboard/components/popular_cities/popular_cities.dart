@@ -18,17 +18,16 @@ class PopularCities extends StatelessWidget {
             style: AppFont.blackTextStyle.copyWith(fontSize: 16.sp),
           ),
         ),
-        SizedBox(
+        Container(
+          padding: const EdgeInsets.only(left: 24),
           width: AppDimen.wInfinit,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                24.0.width,
                 ...CityModel.listCity.map(
                   (data) => CityCard(data),
                 ),
-                24.0.width,
               ],
             ),
           ),
