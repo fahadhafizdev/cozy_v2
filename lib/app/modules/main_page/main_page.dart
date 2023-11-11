@@ -1,6 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
+import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -67,7 +68,7 @@ class _MainPageState extends State<MainPage> {
       }
     }
 
-    Widget customNavigation() {
+    Widget mobileNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
@@ -91,6 +92,16 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
       );
+    }
+
+    Widget customNavigation() {
+      return LayoutBuilder(builder: (context, constraint) {
+        if (constraint.maxWidth <= 700) {
+          return mobileNavigation();
+        } else {
+          return const SizedBox.shrink();
+        }
+      });
     }
 
     return Scaffold(
