@@ -67,11 +67,12 @@ class SplashScreenView extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          //check
           orangeBox(),
           riveShape(),
           blurFilter(),
           const SplashScreenContent(),
-          housePicture()
+          housePicture(),
         ],
       ),
     );
