@@ -32,5 +32,5 @@ class ImageString {
   static String iconCupboard = '$icons/icon_lemari.png';
   static String bgHeaderWeb = '$images/bg_header_web.svg';
   static String bgBottomWeb = '$images/bg_bottom_web.svg';
-  static String heroHeader = '$images/photo1.png';
+  static String heroHeader = '$images/.png';
 }
