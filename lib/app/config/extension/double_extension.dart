@@ -5,4 +5,6 @@ extension DoubleExtension on double {
   Widget get width => SizedBox(width: w);
 
   Widget get height => SizedBox(height: h);
+
+  // Widget get widthWeb => SizedBox(width: MediaQuery.of(context).size.width,)
 }

@@ -11,6 +11,9 @@ class SplashScreenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppDimen.wMediaquery = MediaQuery.of(context).size.width;
+    AppDimen.hMediaquery = MediaQuery.of(context).size.height;
+
     Widget housePicture() {
       return LayoutBuilder(
         builder: (context, constraint) {

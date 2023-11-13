@@ -1,3 +1,4 @@
+import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/modules/main_page/main_page.dart';
 import 'package:cozy_v2/app/modules/splashscreen/splashscreen_view.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
     );
+
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,

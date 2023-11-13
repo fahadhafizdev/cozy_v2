@@ -1,5 +1,6 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
+import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,57 @@ class SpaceCardWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget image() {
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(18),
+        child: SizedBox(
+          width: AppDimen.wInfinit,
+          height: 239,
+          child: Stack(
+            children: [
+              Image.asset(
+                space.imageUrl,
+                width: AppDimen.wInfinit,
+                height: 239,
+                fit: BoxFit.cover,
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  width: 70,
+                  height: 30,
+                  decoration: BoxDecoration(
+                    color: AppColor.mainColor,
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(35),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        ImageString.iconStar,
+                        width: 14,
+                        height: 14,
+                      ),
+                      5.0.width,
+                      Text(
+                        '${space.rating}/5',
+                        style: AppFont.whiteTextStyle.copyWith(
+                          fontSize: 13.sp,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
     return Container(
       padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
       decoration: BoxDecoration(
@@ -30,15 +82,7 @@ class SpaceCardWeb extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Image.asset(
-              space.imageUrl,
-              width: AppDimen.wInfinit,
-              height: 239,
-              fit: BoxFit.cover,
-            ),
-          ),
+          image(),
           13.0.height,
           Text(
             space.name,

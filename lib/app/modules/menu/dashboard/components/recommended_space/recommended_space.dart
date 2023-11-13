@@ -39,25 +39,32 @@ class RecommendedSpace extends StatelessWidget {
           ),
         ),
         Container(
-          width: AppDimen.wInfinit,
-          margin: const EdgeInsets.fromLTRB(24, 20, 24, 0),
-          child: GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 3,
-            crossAxisSpacing: 60,
-            mainAxisSpacing: 24,
-            childAspectRatio: (370 / 420),
-            primary: false,
-            children: [
-              ...SpaceModel.listSpaces
-                  .map((space) => SpaceCardWeb(space: space)),
-              ...SpaceModel.listSpaces
-                  .map((space) => SpaceCardWeb(space: space)),
-              ...SpaceModel.listSpaces
-                  .map((space) => SpaceCardWeb(space: space)),
-            ],
-          ),
-        ),
+            width: AppDimen.wInfinit,
+            margin: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+            child: LayoutBuilder(
+              builder: (context, constraint) {
+                return GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: (constraint.maxWidth <= 1200) ? 2 : 3,
+                  crossAxisSpacing: 60,
+                  mainAxisSpacing: 24,
+                  childAspectRatio: (constraint.maxWidth <= 1200)
+                      ? MediaQuery.of(context).size.width /
+                          (MediaQuery.of(context).size.height / 0.70)
+                      : MediaQuery.of(context).size.width /
+                          (MediaQuery.of(context).size.height / 0.47),
+                  primary: false,
+                  children: [
+                    ...SpaceModel.listSpaces
+                        .map((space) => SpaceCardWeb(space: space)),
+                    ...SpaceModel.listSpaces
+                        .map((space) => SpaceCardWeb(space: space)),
+                    ...SpaceModel.listSpaces
+                        .map((space) => SpaceCardWeb(space: space)),
+                  ],
+                );
+              },
+            )),
       ],
     );
   }
@@ -66,7 +73,7 @@ class RecommendedSpace extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraint) {
-        if (constraint.maxWidth <= 700) {
+        if (constraint.maxWidth <= 1189) {
           return mobileView();
         } else {
           return webView();

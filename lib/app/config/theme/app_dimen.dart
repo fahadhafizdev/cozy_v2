@@ -24,6 +24,7 @@ class AppDimen {
   static double w40 = 40.0.w;
   static double w48 = 48.0.w;
   static double wInfinit = double.infinity;
+  static late double wMediaquery;
 
   //  HEIGHT
   static double h2 = 2.0.h;
@@ -48,4 +49,5 @@ class AppDimen {
   static double h40 = 40.0.h;
   static double h60 = 60.0.h;
   static double hInfinit = double.infinity;
+  static late double hMediaquery;
 }
