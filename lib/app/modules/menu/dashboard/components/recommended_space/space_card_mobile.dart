@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class SpaceCardMobile extends StatelessWidget {
   final SpaceModel space;
-  const SpaceCardMobile(this.space, {super.key});
+  const SpaceCardMobile({super.key, required this.space});
 
   @override
   Widget build(BuildContext context) {
