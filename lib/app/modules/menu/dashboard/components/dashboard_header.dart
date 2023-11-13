@@ -32,14 +32,9 @@ class DashboardHeader extends StatelessWidget {
       return Align(
         alignment: Alignment.topCenter,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 100),
+          padding: const EdgeInsets.only(bottom: 50),
           child: Stack(
             children: [
-              // Image.asset(
-              //   ImageString.bgHeaderWeb,
-              //   fit: BoxFit.cover,
-              //   width: AppDimen.wInfinit,
-              // ),
               Container(
                 height: 600,
                 width: AppDimen.wInfinit,

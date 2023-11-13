@@ -4,9 +4,9 @@ import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/modules/menu/space_detail/space_detail.dart';
 import 'package:flutter/material.dart';
 
-class SpaceCard extends StatelessWidget {
+class SpaceCardMobile extends StatelessWidget {
   final SpaceModel space;
-  const SpaceCard(this.space, {super.key});
+  const SpaceCardMobile(this.space, {super.key});
 
   @override
   Widget build(BuildContext context) {
