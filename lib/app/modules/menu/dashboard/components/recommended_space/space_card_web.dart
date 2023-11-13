@@ -116,12 +116,12 @@ class SpaceCardWeb extends StatelessWidget {
           ),
           18.0.height,
           SizedBox(
-            height: 60,
+            height: AppDimen.wMediaquery * 0.04,
             child: CustomButton(
               isLoading: false,
               func: () {},
               text: 'Book now',
-              fontSize: 16.sp,
+              fontSize: 14.sp,
               btnStyle: AppButtonStyle.btnMain,
             ),
           )

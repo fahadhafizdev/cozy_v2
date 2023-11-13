@@ -6,7 +6,13 @@ extension DoubleExtension on double {
 
   Widget get height => SizedBox(height: h);
 
-  Widget get widthWeb => SizedBox(width: AppDimen.wMediaquery);
-
   Widget get heightWeb => SizedBox(width: AppDimen.hMediaquery);
+}
+
+extension WidgetExtension on Widget {
+  Widget getwidthWeb(double factor) =>
+      SizedBox(width: AppDimen.wMediaquery * factor);
+
+  Widget getHeightWeb(double factor) =>
+      SizedBox(height: AppDimen.hMediaquery * factor);
 }

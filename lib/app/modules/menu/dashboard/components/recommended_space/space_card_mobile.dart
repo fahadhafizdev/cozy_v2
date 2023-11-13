@@ -113,7 +113,7 @@ class SpaceCardMobile extends StatelessWidget {
         child: Row(
           children: [
             image(),
-            SizedBox(width: AppDimen.wMediaquery * 0.030),
+            getwidthWeb(0.030),
             desc(),
           ],
         ),

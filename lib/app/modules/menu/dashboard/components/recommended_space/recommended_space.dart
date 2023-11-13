@@ -49,10 +49,8 @@ class RecommendedSpace extends StatelessWidget {
                   crossAxisSpacing: 60,
                   mainAxisSpacing: 24,
                   childAspectRatio: (constraint.maxWidth <= 1200)
-                      ? MediaQuery.of(context).size.width /
-                          (MediaQuery.of(context).size.height / 0.70)
-                      : MediaQuery.of(context).size.width /
-                          (MediaQuery.of(context).size.height / 0.47),
+                      ? AppDimen.wMediaquery / (AppDimen.hMediaquery / 0.74)
+                      : AppDimen.wMediaquery / (AppDimen.hMediaquery / 0.47),
                   primary: false,
                   children: [
                     ...SpaceModel.listSpaces
@@ -73,7 +71,7 @@ class RecommendedSpace extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraint) {
-        if (constraint.maxWidth <= 1189) {
+        if (constraint.maxWidth <= 1100) {
           return mobileView();
         } else {
           return webView();
