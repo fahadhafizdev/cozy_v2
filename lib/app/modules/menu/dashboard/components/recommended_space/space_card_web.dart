@@ -1,5 +1,6 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
+import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCardWeb extends StatelessWidget {
@@ -9,13 +10,13 @@ class SpaceCardWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 461,
-      width: 370,
-      padding: const EdgeInsets.all(22),
+      padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
       decoration: BoxDecoration(
         color: AppColor.white,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColor.grey1),
+        border: Border.all(
+          color: AppColor.grey1.withOpacity(0.5),
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
@@ -26,6 +27,7 @@ class SpaceCardWeb extends StatelessWidget {
         ],
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
@@ -68,6 +70,17 @@ class SpaceCardWeb extends StatelessWidget {
                   ),
                 ]),
           ),
+          18.0.height,
+          SizedBox(
+            height: 60,
+            child: CustomButton(
+              isLoading: false,
+              func: () {},
+              text: 'Book now',
+              fontSize: 16.sp,
+              btnStyle: AppButtonStyle.btnMain,
+            ),
+          )
         ],
       ),
     );

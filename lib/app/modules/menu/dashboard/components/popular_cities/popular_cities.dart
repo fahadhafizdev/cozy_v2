@@ -32,6 +32,7 @@ class PopularCities extends StatelessWidget {
             ),
           ),
         ),
+        24.0.height,
       ],
     );
   }

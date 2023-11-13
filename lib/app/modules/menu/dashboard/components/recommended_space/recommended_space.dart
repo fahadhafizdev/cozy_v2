@@ -39,13 +39,20 @@ class RecommendedSpace extends StatelessWidget {
           ),
         ),
         Container(
-          height: 500,
           width: AppDimen.wInfinit,
-          margin: const EdgeInsets.fromLTRB(100, 0, 100, 0),
-          child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, crossAxisSpacing: 16),
+          margin: const EdgeInsets.fromLTRB(24, 20, 24, 0),
+          child: GridView.count(
+            shrinkWrap: true,
+            crossAxisCount: 3,
+            crossAxisSpacing: 60,
+            mainAxisSpacing: 24,
+            childAspectRatio: (370 / 420),
+            primary: false,
             children: [
+              ...SpaceModel.listSpaces
+                  .map((space) => SpaceCardWeb(space: space)),
+              ...SpaceModel.listSpaces
+                  .map((space) => SpaceCardWeb(space: space)),
               ...SpaceModel.listSpaces
                   .map((space) => SpaceCardWeb(space: space)),
             ],
