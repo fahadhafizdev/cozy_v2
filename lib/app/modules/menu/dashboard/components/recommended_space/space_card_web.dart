@@ -85,17 +85,17 @@ class SpaceCardWeb extends StatelessWidget {
           image(),
           13.0.height,
           Text(
-            space.name,
+            space.name.toTitleCase(),
             style: AppFont.blackTextStyle.copyWith(
               fontWeight: AppFont.medium,
-              fontSize: 24.sp,
+              fontSize: 18.sp,
             ),
           ),
           2.0.height,
           Text(
             '${space.city}, ${space.country}',
             style: AppFont.greyTextStyle.copyWith(
-              fontSize: 14,
+              fontSize: 16.sp,
             ),
           ),
           11.0.height,

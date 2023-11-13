@@ -103,7 +103,7 @@ class DashboardHeader extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(0, 80.h, 40, 0),
                         child: Image.asset(
                           ImageString.heroHeader,
-                          width: 700,
+                          width: 650,
                         ),
                       );
                     } else {
@@ -163,7 +163,7 @@ class DashboardHeader extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraint) {
-        if (constraint.maxWidth >= 1100) {
+        if (constraint.maxWidth >= 1020) {
           return webView();
         } else {
           return mobileView();

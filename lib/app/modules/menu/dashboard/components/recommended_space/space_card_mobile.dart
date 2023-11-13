@@ -66,7 +66,7 @@ class SpaceCardMobile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            space.name,
+            space.name.toTitleCase(),
             style: AppFont.blackTextStyle.copyWith(
               fontSize: 18.sp,
             ),
@@ -113,7 +113,7 @@ class SpaceCardMobile extends StatelessWidget {
         child: Row(
           children: [
             image(),
-            28.0.width,
+            SizedBox(width: AppDimen.wMediaquery * 0.030),
             desc(),
           ],
         ),
