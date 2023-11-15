@@ -10,6 +10,7 @@ class TileNavigationWeb extends StatelessWidget {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
+        if (title == 'dashboard') return;
         Navigator.pushNamed(context, '/$title-view');
       },
       child: Text(
