@@ -4,7 +4,6 @@ import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
 import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
 import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
 import 'package:cozy_v2/app/modules/menu/news/news_view.dart';
-import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
