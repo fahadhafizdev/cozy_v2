@@ -55,10 +55,6 @@ class RecommendedSpace extends StatelessWidget {
                   children: [
                     ...SpaceModel.listSpaces
                         .map((space) => SpaceCardWeb(space: space)),
-                    ...SpaceModel.listSpaces
-                        .map((space) => SpaceCardWeb(space: space)),
-                    ...SpaceModel.listSpaces
-                        .map((space) => SpaceCardWeb(space: space)),
                   ],
                 );
               },

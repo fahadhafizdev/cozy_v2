@@ -1,7 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
-import 'package:cozy_v2/app/modules/menu/space_detail/components/dialog_book_now.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/components/dialog_book_now.dart';
 import 'package:cozy_v2/app/utils/util_launch_url.dart';
 import 'package:cozy_v2/app/utils/util_show_dialog_tool.dart';
 import 'package:cozy_v2/app/widgets/custom_button.dart';

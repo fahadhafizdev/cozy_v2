@@ -1,7 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
-import 'package:cozy_v2/app/modules/menu/space_detail/space_detail.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/space_detail.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCardMobile extends StatelessWidget {
