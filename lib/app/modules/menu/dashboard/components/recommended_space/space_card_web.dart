@@ -61,71 +61,74 @@ class SpaceCardWeb extends StatelessWidget {
       );
     }
 
-    return Container(
-      padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
-      decoration: BoxDecoration(
-        color: AppColor.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: AppColor.grey1.withOpacity(0.5),
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
+        decoration: BoxDecoration(
+          color: AppColor.white,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: AppColor.grey1.withOpacity(0.5),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.1),
+              spreadRadius: 0,
+              blurRadius: 12,
+              offset: const Offset(0, 4),
+            ),
+          ],
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 0,
-            blurRadius: 12,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          image(),
-          13.0.height,
-          Text(
-            space.name.toTitleCase(),
-            style: AppFont.blackTextStyle.copyWith(
-              fontWeight: AppFont.medium,
-              fontSize: 18.sp,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            image(),
+            13.0.height,
+            Text(
+              space.name.toTitleCase(),
+              style: AppFont.blackTextStyle.copyWith(
+                fontWeight: AppFont.medium,
+                fontSize: 18.sp,
+              ),
             ),
-          ),
-          2.0.height,
-          Text(
-            '${space.city}, ${space.country}',
-            style: AppFont.greyTextStyle.copyWith(
-              fontSize: 16.sp,
+            2.0.height,
+            Text(
+              '${space.city}, ${space.country}',
+              style: AppFont.greyTextStyle.copyWith(
+                fontSize: 16.sp,
+              ),
             ),
-          ),
-          11.0.height,
-          Text.rich(
-            TextSpan(
-                text: '\$${space.price}',
-                style: AppFont.purpleTextStyle.copyWith(
-                  fontSize: 16.sp,
-                ),
-                children: [
-                  TextSpan(
-                    text: ' / month',
-                    style: AppFont.greyTextStyle.copyWith(
-                      fontSize: 16.sp,
-                    ),
+            11.0.height,
+            Text.rich(
+              TextSpan(
+                  text: '\$${space.price}',
+                  style: AppFont.purpleTextStyle.copyWith(
+                    fontSize: 16.sp,
                   ),
-                ]),
-          ),
-          18.0.height,
-          SizedBox(
-            height: AppDimen.wMediaquery * 0.04,
-            child: CustomButton(
-              isLoading: false,
-              func: () {},
-              text: 'Book now',
-              fontSize: 14.sp,
-              btnStyle: AppButtonStyle.btnMain,
+                  children: [
+                    TextSpan(
+                      text: ' / month',
+                      style: AppFont.greyTextStyle.copyWith(
+                        fontSize: 16.sp,
+                      ),
+                    ),
+                  ]),
             ),
-          )
-        ],
+            18.0.height,
+            SizedBox(
+              height: AppDimen.wMediaquery * 0.04,
+              child: CustomButton(
+                isLoading: false,
+                func: () {},
+                text: 'Book now',
+                fontSize: 14.sp,
+                btnStyle: AppButtonStyle.btnMain,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
