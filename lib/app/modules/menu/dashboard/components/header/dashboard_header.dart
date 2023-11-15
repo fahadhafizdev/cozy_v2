@@ -1,5 +1,6 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/header/tile_navigation_web.dart';
 import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -62,33 +63,13 @@ class DashboardHeader extends StatelessWidget {
                         width: 72,
                       ),
                       7.0.width,
-                      Text(
-                        'Home',
-                        style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 18.sp,
-                        ),
-                      ),
+                      const TileNavigationWeb(title: 'dashboard'),
                       7.0.width,
-                      Text(
-                        'Message',
-                        style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 18.sp,
-                        ),
-                      ),
+                      const TileNavigationWeb(title: 'message'),
                       7.0.width,
-                      Text(
-                        'News',
-                        style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 18.sp,
-                        ),
-                      ),
+                      const TileNavigationWeb(title: 'news'),
                       7.0.width,
-                      Text(
-                        'Favorite',
-                        style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 18.sp,
-                        ),
-                      ),
+                      const TileNavigationWeb(title: 'favorite'),
                       7.0.width,
                     ],
                   ),

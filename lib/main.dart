@@ -1,5 +1,9 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/modules/main_page/main_page.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
+import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
+import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
+import 'package:cozy_v2/app/modules/menu/news/news_view.dart';
 import 'package:cozy_v2/app/modules/splashscreen/splashscreen_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,6 +38,10 @@ class MyApp extends StatelessWidget {
           routes: {
             '/': (context) => const SplashScreenView(),
             '/main-page': (context) => const MainPage(),
+            '/dashboard-view': (context) => const DashboardView(),
+            '/message-view': (context) => const MessageView(),
+            '/news-view': (context) => const NewsView(),
+            '/favorite-view': (context) => const FavoriteView(),
           },
         );
       },
