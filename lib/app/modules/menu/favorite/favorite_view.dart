@@ -3,8 +3,8 @@ import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MessageView extends StatelessWidget {
-  const MessageView({super.key});
+class FavoriteView extends StatelessWidget {
+  const FavoriteView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class MessageView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(
-            ImageString.iconMessage,
+            ImageString.iconLove,
             color: AppColor.grey1,
             width: 80,
             height: 80,

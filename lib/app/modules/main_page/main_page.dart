@@ -1,6 +1,8 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
+import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
+import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
 import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -58,11 +60,11 @@ class _MainPageState extends State<MainPage> {
         case 0:
           return const DashboardView();
         case 1:
-          return const SizedBox();
+          return const MessageView();
+        case 2:
+          return const FavoriteView();
         case 3:
-          return const SizedBox();
-        case 4:
-          return const SizedBox();
+          return const FavoriteView();
         default:
           return const SizedBox();
       }
