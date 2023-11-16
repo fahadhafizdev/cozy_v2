@@ -1,3 +1,4 @@
+import 'package:cozy_v2/app/modules/menu/favorite/components/favorite_header.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteView extends StatelessWidget {
@@ -8,7 +9,9 @@ class FavoriteView extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [],
+        children: const [
+          FavoriteHeader(),
+        ],
       ),
     );
   }
