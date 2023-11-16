@@ -309,7 +309,7 @@ class SpaceDetail extends StatelessWidget {
                 Image.asset(
                   space.imageUrl,
                   width: MediaQuery.of(context).size.width,
-                  height: AppDimen.hMediaquery * 0.9,
+                  height: AppDimen.hMediaquery,
                   fit: BoxFit.cover,
                 ),
                 headerButton(),
@@ -319,6 +319,7 @@ class SpaceDetail extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
+                100.0.height,
                 Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
