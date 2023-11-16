@@ -301,7 +301,51 @@ class SpaceDetail extends StatelessWidget {
     }
 
     Widget webView() {
-      return SizedBox();
+      return Row(
+        children: [
+          Expanded(
+            child: Stack(
+              children: [
+                Image.asset(
+                  space.imageUrl,
+                  width: MediaQuery.of(context).size.width,
+                  height: AppDimen.hMediaquery * 0.9,
+                  fit: BoxFit.cover,
+                ),
+                headerButton(),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                    color: AppColor.white,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      30.0.height,
+                      headerCard(),
+                      30.0.height,
+                      mainFacility(),
+                      photoPreview(),
+                      location(),
+                      btnBook(),
+                      40.0.height,
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
+      );
     }
 
     return Scaffold(
