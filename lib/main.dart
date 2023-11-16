@@ -1,5 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
+import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/modules/main_page/main_page.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/space_detail.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
 import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
 import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
