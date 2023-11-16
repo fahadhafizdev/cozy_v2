@@ -285,9 +285,8 @@ class SpaceDetail extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      backgroundColor: AppColor.white,
-      body: Stack(
+    Widget mobileView() {
+      return Stack(
         children: [
           Image.asset(
             space.imageUrl,
@@ -298,7 +297,19 @@ class SpaceDetail extends StatelessWidget {
           content(),
           headerButton(),
         ],
-      ),
-    );
+      );
+    }
+
+    return Scaffold(
+        backgroundColor: AppColor.white,
+        body: LayoutBuilder(
+          builder: (context, constraint) {
+            if (constraint.maxWidth <= 700) {
+              return mobileView();
+            } else {
+              return SizedBox();
+            }
+          },
+        ));
   }
 }
