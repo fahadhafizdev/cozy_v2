@@ -126,7 +126,11 @@ class SpaceCardWeb extends StatelessWidget {
               height: AppDimen.wMediaquery * 0.04,
               child: CustomButton(
                 isLoading: false,
-                func: () {},
+                func: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SpaceDetail(space: space),
+                    )),
                 text: 'Book now',
                 fontSize: 14.sp,
                 btnStyle: AppButtonStyle.btnMain,
