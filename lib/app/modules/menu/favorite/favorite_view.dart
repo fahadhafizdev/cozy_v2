@@ -1,5 +1,3 @@
-import 'package:cozy_v2/app/data/src/image_string.dart';
-import 'package:cozy_v2/app/widgets/coming_soon_page.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteView extends StatelessWidget {
@@ -7,6 +5,11 @@ class FavoriteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ComingSoonPage(imageUrl: ImageString.iconLove);
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [],
+      ),
+    );
   }
 }
