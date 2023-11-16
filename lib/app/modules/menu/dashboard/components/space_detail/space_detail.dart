@@ -300,6 +300,10 @@ class SpaceDetail extends StatelessWidget {
       );
     }
 
+    Widget webView() {
+      return SizedBox();
+    }
+
     return Scaffold(
         backgroundColor: AppColor.white,
         body: LayoutBuilder(
@@ -307,7 +311,7 @@ class SpaceDetail extends StatelessWidget {
             if (constraint.maxWidth <= 700) {
               return mobileView();
             } else {
-              return SizedBox();
+              return webView();
             }
           },
         ));
