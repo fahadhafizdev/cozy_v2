@@ -1,7 +1,5 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class FavoriteHeader extends StatelessWidget {
   const FavoriteHeader({super.key});
@@ -27,11 +25,3 @@ class FavoriteHeader extends StatelessWidget {
     );
   }
 }
-
-// return GestureDetector(
-//                 onTap: () => Navigator.pop(context),
-//                 child: const Padding(
-//                   padding: EdgeInsets.fromLTRB(12, 7, 12, 12),
-//                   child: Center(child: Icon(Icons.arrow_back_ios)),
-//                 ),
-//               );
