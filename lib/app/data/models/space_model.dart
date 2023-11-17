@@ -88,7 +88,7 @@ class SpaceModel {
     SpaceModel(
       id: 4,
       name: 'Malang Kota House',
-      imageUrl: ImageString.space1,
+      imageUrl: ImageString.space4,
       price: 30,
       city: 'Malang',
       country: 'Indonesia',
@@ -105,7 +105,7 @@ class SpaceModel {
     SpaceModel(
       id: 5,
       name: 'Surabaya Stay House',
-      imageUrl: ImageString.space1,
+      imageUrl: ImageString.space5,
       price: 66,
       city: 'Surabaya',
       country: 'Indonesia',
@@ -122,7 +122,7 @@ class SpaceModel {
     SpaceModel(
       id: 6,
       name: 'Kos Patenilir II Palembang',
-      imageUrl: ImageString.space1,
+      imageUrl: ImageString.space6,
       price: 33,
       city: 'Palembang',
       country: 'Indonesia',
