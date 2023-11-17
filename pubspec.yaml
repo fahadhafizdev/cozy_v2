@@ -18,6 +18,8 @@ dependencies:
   intl: ^0.18.0
   flutter_svg: ^1.1.6
   rive: ^0.12.3
+  motion_toast: ^2.7.9
+  lottie: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -36,5 +38,6 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/rive_assets/
+    - assets/lottie_assets/
 
   

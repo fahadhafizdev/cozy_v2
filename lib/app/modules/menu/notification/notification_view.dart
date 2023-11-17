@@ -1,7 +1,7 @@
 import 'package:cozy_v2/app/config/config.dart';
-import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/data/models/notification_model.dart';
+import 'package:cozy_v2/app/modules/menu/notification/components/notification_card.dart';
 import 'package:cozy_v2/app/modules/menu/notification/components/notification_header.dart';
-import 'package:cozy_v2/app/widgets/coming_soon_page.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {
@@ -15,9 +15,9 @@ class NotificationView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const NotificationHeader(),
-            // ...SpaceModel.listSpaces.map(
-            //   (space) => SpaceCardMobile(space: space, isFavorite: true),
-            // ),
+            ...NotificationModel.listNotif.map(
+              (notif) => NotificationCard(notif: notif),
+            ),
             100.0.height,
           ],
         ),

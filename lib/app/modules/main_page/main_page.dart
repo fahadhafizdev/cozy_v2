@@ -62,9 +62,9 @@ class _MainPageState extends State<MainPage> {
         case 1:
           return const NotificationView();
         case 2:
-          return const NewsView();
-        case 3:
           return const FavoriteView();
+        case 3:
+          return const NewsView();
         default:
           return const SizedBox();
       }
@@ -88,8 +88,8 @@ class _MainPageState extends State<MainPage> {
             children: [
               bottomItem(imageUrl: ImageString.iconHome, index: 0),
               bottomItem(imageUrl: ImageString.iconNotification, index: 1),
-              bottomItem(imageUrl: ImageString.iconNews, index: 2),
-              bottomItem(imageUrl: ImageString.iconLove, index: 3),
+              bottomItem(imageUrl: ImageString.iconLove, index: 2),
+              bottomItem(imageUrl: ImageString.iconNews, index: 3),
             ],
           ),
         ),
