@@ -4,7 +4,7 @@ import 'package:cozy_v2/app/modules/main_page/main_page.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/space_detail.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
 import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
-import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
+import 'package:cozy_v2/app/modules/menu/notification/notification_view.dart';
 import 'package:cozy_v2/app/modules/menu/news/news_view.dart';
 import 'package:cozy_v2/app/modules/splashscreen/splashscreen_view.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             '/': (context) => const SplashScreenView(),
             '/main-page': (context) => const MainPage(),
             '/dashboard-view': (context) => const DashboardView(),
-            '/message-view': (context) => const MessageView(),
+            '/notification-view': (context) => const NotificationView(),
             '/news-view': (context) => const NewsView(),
             '/favorite-view': (context) => const FavoriteView(),
           },

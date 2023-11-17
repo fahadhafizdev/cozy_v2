@@ -8,6 +8,7 @@ class ImageString {
   static String house = '$images/house.png';
   static String iconHome = '$icons/icon_home.svg';
   static String iconLove = '$icons/icon_love.svg';
+  static String iconNotification = '$icons/icon_notification.svg';
   static String iconLoveOutlane = '$icons/icon_love_outlane.svg';
   static String iconMessage = '$icons/icon_message.svg';
   static String iconNews = '$icons/icon_news.svg';

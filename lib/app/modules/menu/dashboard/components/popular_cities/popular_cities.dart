@@ -19,12 +19,12 @@ class PopularCities extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.only(left: 24),
           width: AppDimen.wInfinit,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
+                const SizedBox(width: 24),
                 ...CityModel.listCity.map(
                   (data) => CityCard(data),
                 ),

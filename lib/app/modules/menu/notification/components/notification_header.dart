@@ -1,8 +1,8 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:flutter/material.dart';
 
-class FavoriteHeader extends StatelessWidget {
-  const FavoriteHeader({super.key});
+class NotificationHeader extends StatelessWidget {
+  const NotificationHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class FavoriteHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'List Favorite',
+            'Notification',
             style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
           ),
           2.0.height,

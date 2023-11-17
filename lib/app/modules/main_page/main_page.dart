@@ -2,7 +2,7 @@ import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/dashboard_view.dart';
 import 'package:cozy_v2/app/modules/menu/favorite/favorite_view.dart';
-import 'package:cozy_v2/app/modules/menu/message/message_view.dart';
+import 'package:cozy_v2/app/modules/menu/notification/notification_view.dart';
 import 'package:cozy_v2/app/modules/menu/news/news_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -60,7 +60,7 @@ class _MainPageState extends State<MainPage> {
         case 0:
           return const DashboardView();
         case 1:
-          return const MessageView();
+          return const NotificationView();
         case 2:
           return const NewsView();
         case 3:
@@ -87,7 +87,7 @@ class _MainPageState extends State<MainPage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               bottomItem(imageUrl: ImageString.iconHome, index: 0),
-              bottomItem(imageUrl: ImageString.iconMessage, index: 1),
+              bottomItem(imageUrl: ImageString.iconNotification, index: 1),
               bottomItem(imageUrl: ImageString.iconNews, index: 2),
               bottomItem(imageUrl: ImageString.iconLove, index: 3),
             ],
