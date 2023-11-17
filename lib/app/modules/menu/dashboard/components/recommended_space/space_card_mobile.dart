@@ -1,12 +1,15 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/models/space_model.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
+import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/components/favorit_item.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/components/space_detail/space_detail.dart';
 import 'package:flutter/material.dart';
 
 class SpaceCardMobile extends StatelessWidget {
   final SpaceModel space;
-  const SpaceCardMobile({super.key, required this.space});
+  final bool isFavorite;
+  const SpaceCardMobile(
+      {super.key, required this.space, this.isFavorite = false});
 
   @override
   Widget build(BuildContext context) {
@@ -115,6 +118,10 @@ class SpaceCardMobile extends StatelessWidget {
             image(),
             getwidthWeb(0.030),
             desc(),
+            isFavorite ? const Spacer() : const SizedBox.shrink(),
+            isFavorite
+                ? FavoritWidget(initFavorit: true)
+                : const SizedBox.shrink()
           ],
         ),
       ),

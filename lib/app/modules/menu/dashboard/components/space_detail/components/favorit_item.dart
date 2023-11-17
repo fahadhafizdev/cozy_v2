@@ -3,8 +3,10 @@ import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+// ignore: must_be_immutable
 class FavoritWidget extends StatefulWidget {
-  const FavoritWidget({super.key});
+  bool initFavorit;
+  FavoritWidget({super.key, this.initFavorit = false});
 
   @override
   State<FavoritWidget> createState() => _FavoritWidgetState();
@@ -14,10 +16,12 @@ class _FavoritWidgetState extends State<FavoritWidget> {
   bool _isFavorited = false;
   @override
   Widget build(BuildContext context) {
+    _isFavorited = widget.initFavorit;
     return GestureDetector(
       onTap: () {
         setState(() {
           _isFavorited = !_isFavorited;
+          widget.initFavorit = _isFavorited;
         });
       },
       child: Container(

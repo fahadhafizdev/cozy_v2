@@ -39,7 +39,7 @@ class SpaceDetail extends StatelessWidget {
                 child: const Center(child: Icon(Icons.arrow_back_ios)),
               ),
             ),
-            const FavoritWidget(),
+            FavoritWidget(),
           ],
         ),
       );
