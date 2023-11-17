@@ -24,6 +24,9 @@ class ImageString {
   static String space1 = '$images/space1.png';
   static String space2 = '$images/space2.png';
   static String space3 = '$images/space3.png';
+  static String space4 = '$images/space4.png';
+  static String space5 = '$images/space5.png';
+  static String space6 = '$images/space6.png';
   static String tips1 = '$images/tips1.png';
   static String tips2 = '$images/tips2.png';
   static String iconStar = '$icons/icon_star.png';
