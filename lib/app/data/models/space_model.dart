@@ -120,7 +120,7 @@ class SpaceModel {
       numberOfCupBoards: 4,
     ),
     SpaceModel(
-      id: 5,
+      id: 6,
       name: 'Kos Patenilir II Palembang',
       imageUrl: ImageString.space1,
       price: 33,
