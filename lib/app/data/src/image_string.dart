@@ -38,4 +38,6 @@ class ImageString {
   static String bgHeaderWeb = '$images/bg_header_web.png';
   static String bgBottomWeb = '$images/bg_bottom_web.png';
   static String heroHeader = '$images/hero_header.png';
+  static String underDevelopment =
+      '$lottieAssets/under_development_lottie.json';
 }

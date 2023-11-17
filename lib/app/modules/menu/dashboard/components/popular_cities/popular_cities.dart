@@ -18,7 +18,7 @@ class PopularCities extends StatelessWidget {
             style: AppFont.blackTextStyle.copyWith(fontSize: 16.sp),
           ),
         ),
-        Container(
+        SizedBox(
           width: AppDimen.wInfinit,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,

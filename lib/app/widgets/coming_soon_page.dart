@@ -1,7 +1,8 @@
 import 'package:cozy_v2/app/config/config.dart';
+import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
 
 class ComingSoonPage extends StatelessWidget {
   final String imageUrl;
@@ -14,21 +15,17 @@ class ComingSoonPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              imageUrl,
-              color: AppColor.grey1,
-              width: 80,
-              height: 80,
-            ),
+            LottieBuilder.asset(ImageString.underDevelopment, width: 200),
             24.0.height,
             Text(
-              'Coming Soon',
+              'This Feature\nUnder Development',
               textAlign: TextAlign.center,
               style: AppFont.blackTextStyle.copyWith(
                 fontWeight: AppFont.bold,
                 fontSize: 18.sp,
               ),
             ),
+            12.0.height,
             Text(
               'Stay Tuned',
               textAlign: TextAlign.center,
@@ -45,21 +42,17 @@ class ComingSoonPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              imageUrl,
-              color: AppColor.grey1,
-              width: 80,
-              height: 80,
-            ),
+            LottieBuilder.asset(ImageString.underDevelopment, width: 200),
             24.0.height,
             Text(
-              'Coming Soon',
+              'This Feature\nUnder Development',
               textAlign: TextAlign.center,
               style: AppFont.blackTextStyle.copyWith(
                 fontWeight: AppFont.bold,
                 fontSize: 18.sp,
               ),
             ),
+            12.0.height,
             Text(
               'Stay Tuned',
               textAlign: TextAlign.center,
