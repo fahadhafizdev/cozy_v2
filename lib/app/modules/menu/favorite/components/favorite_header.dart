@@ -10,40 +10,28 @@ class FavoriteHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 40, 0, 30),
-      child: Row(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          LayoutBuilder(builder: (context, constraint) {
-            if (constraint.maxWidth <= 700) {
-              return const SizedBox.shrink();
-            } else {
-              return GestureDetector(
-                onTap: () => Navigator.pop(context),
-                child: const Padding(
-                  padding: EdgeInsets.fromLTRB(12, 7, 12, 12),
-                  child: Center(child: Icon(Icons.arrow_back_ios)),
-                ),
-              );
-            }
-          }),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'List Favorite',
-                  style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
-                ),
-                2.0.height,
-                Text(
-                  'Mencari kosan yang cozy',
-                  style: AppFont.greyTextStyle.copyWith(fontSize: 16.sp),
-                ),
-              ],
-            ),
+          Text(
+            'List Favorite',
+            style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+          ),
+          2.0.height,
+          Text(
+            'Mencari kosan yang cozy',
+            style: AppFont.greyTextStyle.copyWith(fontSize: 16.sp),
           ),
         ],
       ),
     );
   }
 }
+
+// return GestureDetector(
+//                 onTap: () => Navigator.pop(context),
+//                 child: const Padding(
+//                   padding: EdgeInsets.fromLTRB(12, 7, 12, 12),
+//                   child: Center(child: Icon(Icons.arrow_back_ios)),
+//                 ),
+//               );
