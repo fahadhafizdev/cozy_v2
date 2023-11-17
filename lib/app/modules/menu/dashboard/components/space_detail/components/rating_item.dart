@@ -1,3 +1,4 @@
+import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class RatingItem extends StatelessWidget {
     return Image.asset(
       ImageString.iconStar,
       width: 20,
-      color: index <= rating ? null : Color(0xff989BA1),
+      color: index <= rating ? null : AppColor.grey4,
     );
   }
 }

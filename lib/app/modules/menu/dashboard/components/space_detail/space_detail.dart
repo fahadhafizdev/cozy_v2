@@ -141,7 +141,7 @@ class SpaceDetail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 24),
+            padding: const EdgeInsets.only(left: 24),
             child: Text(
               'Photos',
               style: AppFont.blackTextStyle.copyWith(
