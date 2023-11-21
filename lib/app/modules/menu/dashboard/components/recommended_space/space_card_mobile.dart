@@ -65,39 +65,42 @@ class SpaceCardMobile extends StatelessWidget {
     }
 
     Widget desc() {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            space.name.toTitleCase(),
-            style: AppFont.blackTextStyle.copyWith(
-              fontSize: 18.sp,
+      return Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              space.name.toTitleCase(),
+              style: AppFont.blackTextStyle.copyWith(
+                fontSize: 18.sp,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
-          ),
-          2.0.height,
-          Text.rich(
-            TextSpan(
-                text: '\$${space.price}',
-                style: AppFont.purpleTextStyle.copyWith(
-                  fontSize: 16.sp,
-                ),
-                children: [
-                  TextSpan(
-                    text: ' / month',
-                    style: AppFont.greyTextStyle.copyWith(
-                      fontSize: 16.sp,
-                    ),
+            2.0.height,
+            Text.rich(
+              TextSpan(
+                  text: '\$${space.price}',
+                  style: AppFont.purpleTextStyle.copyWith(
+                    fontSize: 16.sp,
                   ),
-                ]),
-          ),
-          16.0.height,
-          Text(
-            '${space.city}, ${space.country}',
-            style: AppFont.greyTextStyle.copyWith(
-              fontSize: 14,
+                  children: [
+                    TextSpan(
+                      text: ' / month',
+                      style: AppFont.greyTextStyle.copyWith(
+                        fontSize: 16.sp,
+                      ),
+                    ),
+                  ]),
             ),
-          ),
-        ],
+            16.0.height,
+            Text(
+              '${space.city}, ${space.country}',
+              style: AppFont.greyTextStyle.copyWith(
+                fontSize: 14,
+              ),
+            ),
+          ],
+        ),
       );
     }
 
@@ -118,7 +121,7 @@ class SpaceCardMobile extends StatelessWidget {
             image(),
             getwidthWeb(0.030),
             desc(),
-            isFavorite ? const Spacer() : const SizedBox.shrink(),
+            // isFavorite ? const Spacer() : const SizedBox.shrink(),
             isFavorite
                 ? FavoritWidget(initFavorit: true)
                 : const SizedBox.shrink()
