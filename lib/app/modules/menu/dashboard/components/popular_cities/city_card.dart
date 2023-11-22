@@ -15,8 +15,13 @@ class CityCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         MotionToast.success(
-          title: Text(city.name),
-          description: Text(city.desc),
+          title: Text(
+            city.name.toTitleCase(),
+            style: AppFont.blackTextStyle.copyWith(
+              fontWeight: AppFont.semiBold,
+            ),
+          ),
+          description: Text(city.desc, maxLines: 3),
           position: MotionToastPosition.top,
           toastDuration: const Duration(seconds: 1),
         ).show(context);

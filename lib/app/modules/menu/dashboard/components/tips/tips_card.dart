@@ -11,9 +11,15 @@ class TipsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.translucent,
       onTap: () {
         MotionToast.success(
-          title: Text(tips.title),
+          title: Text(
+            tips.title,
+            style: AppFont.blackTextStyle.copyWith(
+              fontWeight: AppFont.semiBold,
+            ),
+          ),
           description: const Text('Coming soon'),
           position: MotionToastPosition.top,
           toastDuration: const Duration(seconds: 1),

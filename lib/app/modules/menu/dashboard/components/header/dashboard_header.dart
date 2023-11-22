@@ -110,27 +110,13 @@ class DashboardHeader extends StatelessWidget {
                         'Find Cozy House\nto Stay and Happy',
                         style: AppFont.whiteTextStyle.copyWith(fontSize: 35.sp),
                       ),
-                      80.0.height,
+                      20.0.height,
                       Text(
                         'Stop membuang banyak waktu\npada tempat yang tidak habitable',
                         style: AppFont.whiteTextStyle.copyWith(
                             fontSize: 20.sp,
                             fontWeight: AppFont.light,
                             color: AppColor.white.withOpacity(0.5)),
-                      ),
-                      SizedBox(
-                        height: 100,
-                        child: CustomButton(
-                          width: 100.w,
-                          margin: const EdgeInsets.only(top: 40),
-                          isLoading: false,
-                          func: () =>
-                              Navigator.pushNamed(context, '/main-page'),
-                          text: 'Explore Now',
-                          fontSize: 20.sp,
-                          btnStyle: AppButtonStyle.btnOrange,
-                          fontWeight: AppFont.medium,
-                        ),
                       ),
                     ],
                   ),
@@ -207,20 +193,6 @@ class DashboardHeader extends StatelessWidget {
                             fontSize: 20.sp,
                             fontWeight: AppFont.light,
                             color: AppColor.white.withOpacity(0.5)),
-                      ),
-                      SizedBox(
-                        height: 100,
-                        child: CustomButton(
-                          width: 100.w,
-                          margin: const EdgeInsets.only(top: 40),
-                          isLoading: false,
-                          func: () =>
-                              Navigator.pushNamed(context, '/main-page'),
-                          text: 'Explore Now',
-                          fontSize: 20.sp,
-                          btnStyle: AppButtonStyle.btnOrange,
-                          fontWeight: AppFont.medium,
-                        ),
                       ),
                     ],
                   ),
