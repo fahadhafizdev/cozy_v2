@@ -21,7 +21,7 @@ class SplashScreenContent extends StatelessWidget {
           30.0.height,
           Text(
             'Find Cozy House\nto Stay and Happy',
-            style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+            style: AppFont.blackTextStyle.copyWith(fontSize: 24),
           ),
           10.0.height,
           Text(
@@ -71,7 +71,10 @@ class SplashScreenContent extends StatelessWidget {
               30.0.height,
               Text(
                 'Find Cozy House\nto Stay and Happy',
-                style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+                style: AppFont.blackTextStyle.copyWith(
+                  fontSize: 24,
+                  fontWeight: AppFont.semiBold,
+                ),
               ),
               10.0.height,
               Text(

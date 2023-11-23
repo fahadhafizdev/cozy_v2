@@ -22,7 +22,7 @@ class ComingSoonPage extends StatelessWidget {
               textAlign: TextAlign.center,
               style: AppFont.blackTextStyle.copyWith(
                 fontWeight: AppFont.bold,
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             12.0.height,
@@ -49,7 +49,7 @@ class ComingSoonPage extends StatelessWidget {
               textAlign: TextAlign.center,
               style: AppFont.blackTextStyle.copyWith(
                 fontWeight: AppFont.bold,
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             12.0.height,

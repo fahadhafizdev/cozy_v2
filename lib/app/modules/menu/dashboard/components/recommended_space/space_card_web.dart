@@ -49,7 +49,7 @@ class SpaceCardWeb extends StatelessWidget {
                       Text(
                         '${space.rating}/5',
                         style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 13.sp,
+                          fontSize: 13,
                         ),
                       ),
                     ],
@@ -95,14 +95,14 @@ class SpaceCardWeb extends StatelessWidget {
               space.name.toTitleCase(),
               style: AppFont.blackTextStyle.copyWith(
                 fontWeight: AppFont.medium,
-                fontSize: 18.sp,
+                fontSize: 18,
               ),
             ),
             2.0.height,
             Text(
               '${space.city}, ${space.country}',
               style: AppFont.greyTextStyle.copyWith(
-                fontSize: 16.sp,
+                fontSize: 16,
               ),
             ),
             11.0.height,
@@ -110,13 +110,13 @@ class SpaceCardWeb extends StatelessWidget {
               TextSpan(
                   text: '\$${space.price}',
                   style: AppFont.purpleTextStyle.copyWith(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                   ),
                   children: [
                     TextSpan(
                       text: ' / month',
                       style: AppFont.greyTextStyle.copyWith(
-                        fontSize: 16.sp,
+                        fontSize: 16,
                       ),
                     ),
                   ]),
@@ -132,7 +132,7 @@ class SpaceCardWeb extends StatelessWidget {
                       builder: (context) => SpaceDetail(space: space),
                     )),
                 text: 'Book now',
-                fontSize: 14.sp,
+                fontSize: 14,
                 btnStyle: AppButtonStyle.btnMain,
               ),
             )

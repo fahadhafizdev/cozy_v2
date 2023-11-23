@@ -15,7 +15,7 @@ class PopularCities extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(24, 0, 0, 16),
           child: Text(
             'Popular Cities',
-            style: AppFont.blackTextStyle.copyWith(fontSize: 16.sp),
+            style: AppFont.blackTextStyle.copyWith(fontSize: 16),
           ),
         ),
         SizedBox(

@@ -13,7 +13,7 @@ class NotificationHeader extends StatelessWidget {
         children: [
           Text(
             'Notification',
-            style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+            style: AppFont.blackTextStyle.copyWith(fontSize: 24),
           ),
           2.0.height,
         ],

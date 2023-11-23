@@ -45,7 +45,7 @@ class NotificationCard extends StatelessWidget {
                         notif.title ?? '',
                         style: AppFont.blackTextStyle.copyWith(
                           fontWeight: AppFont.semiBold,
-                          fontSize: 16.sp,
+                          fontSize: 16,
                         ),
                       ),
                       8.0.height,
@@ -62,7 +62,7 @@ class NotificationCard extends StatelessWidget {
                 child: Text(
                   notif.updatedAt ?? '',
                   textAlign: TextAlign.end,
-                  style: AppFont.grey2TextStyle.copyWith(fontSize: 12.sp),
+                  style: AppFont.grey2TextStyle.copyWith(fontSize: 12),
                 ),
               ),
             ],

@@ -13,7 +13,7 @@ class FavoriteHeader extends StatelessWidget {
         children: [
           Text(
             'List Favorite',
-            style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+            style: AppFont.blackTextStyle.copyWith(fontSize: 24),
           ),
           2.0.height,
         ],

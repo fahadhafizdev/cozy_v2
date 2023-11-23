@@ -51,7 +51,7 @@ class SpaceCardMobile extends StatelessWidget {
                       Text(
                         '${space.rating}/5',
                         style: AppFont.whiteTextStyle.copyWith(
-                          fontSize: 13.sp,
+                          fontSize: 13,
                         ),
                       ),
                     ],
@@ -72,7 +72,7 @@ class SpaceCardMobile extends StatelessWidget {
             Text(
               space.name.toTitleCase(),
               style: AppFont.blackTextStyle.copyWith(
-                fontSize: 18.sp,
+                fontSize: 18,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
@@ -81,13 +81,13 @@ class SpaceCardMobile extends StatelessWidget {
               TextSpan(
                   text: '\$${space.price}',
                   style: AppFont.purpleTextStyle.copyWith(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                   ),
                   children: [
                     TextSpan(
                       text: ' / month',
                       style: AppFont.greyTextStyle.copyWith(
-                        fontSize: 16.sp,
+                        fontSize: 16,
                       ),
                     ),
                   ]),

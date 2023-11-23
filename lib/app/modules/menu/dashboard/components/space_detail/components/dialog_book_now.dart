@@ -22,7 +22,7 @@ class DialogBookNow extends StatelessWidget {
               'Apakah anda ingin menghubungi pemilik kos ?',
               textAlign: TextAlign.center,
               style: AppFont.blackTextStyle.copyWith(
-                fontSize: 20.sp,
+                fontSize: 20,
                 fontWeight: AppFont.semiBold,
               ),
             ),

@@ -16,7 +16,7 @@ class TileNavigationWeb extends StatelessWidget {
       child: Text(
         title.toTitleCase(),
         style: AppFont.whiteTextStyle.copyWith(
-          fontSize: 18.sp,
+          fontSize: 18,
         ),
       ),
     );

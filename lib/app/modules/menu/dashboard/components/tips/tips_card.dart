@@ -41,13 +41,13 @@ class TipsCard extends StatelessWidget {
                 Text(
                   tips.title,
                   style: AppFont.blackTextStyle.copyWith(
-                    fontSize: 18.sp,
+                    fontSize: 18,
                   ),
                 ),
                 Text(
                   'Updated ${tips.updatedAt}',
                   style: AppFont.greyTextStyle.copyWith(
-                    fontSize: 14.sp,
+                    fontSize: 14,
                   ),
                 )
               ],

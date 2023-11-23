@@ -1,7 +1,6 @@
 import 'package:cozy_v2/app/config/config.dart';
 import 'package:cozy_v2/app/data/src/image_string.dart';
 import 'package:cozy_v2/app/modules/menu/dashboard/components/header/tile_navigation_web.dart';
-import 'package:cozy_v2/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class DashboardHeader extends StatelessWidget {
@@ -17,12 +16,12 @@ class DashboardHeader extends StatelessWidget {
           children: [
             Text(
               'Explore Now',
-              style: AppFont.blackTextStyle.copyWith(fontSize: 24.sp),
+              style: AppFont.blackTextStyle.copyWith(fontSize: 24),
             ),
             2.0.height,
             Text(
               'Mencari kosan yang cozy',
-              style: AppFont.greyTextStyle.copyWith(fontSize: 16.sp),
+              style: AppFont.greyTextStyle.copyWith(fontSize: 16),
             ),
           ],
         ),
@@ -108,13 +107,13 @@ class DashboardHeader extends StatelessWidget {
                     children: [
                       Text(
                         'Find Cozy House\nto Stay and Happy',
-                        style: AppFont.whiteTextStyle.copyWith(fontSize: 35.sp),
+                        style: AppFont.whiteTextStyle.copyWith(fontSize: 35),
                       ),
                       20.0.height,
                       Text(
                         'Stop membuang banyak waktu\npada tempat yang tidak habitable',
                         style: AppFont.whiteTextStyle.copyWith(
-                            fontSize: 20.sp,
+                            fontSize: 20,
                             fontWeight: AppFont.light,
                             color: AppColor.white.withOpacity(0.5)),
                       ),
@@ -183,14 +182,14 @@ class DashboardHeader extends StatelessWidget {
                       Text(
                         'Find Cozy House\nto Stay and Happy',
                         textAlign: TextAlign.center,
-                        style: AppFont.whiteTextStyle.copyWith(fontSize: 35.sp),
+                        style: AppFont.whiteTextStyle.copyWith(fontSize: 35),
                       ),
                       3.0.height,
                       Text(
                         'Stop membuang banyak waktu\npada tempat yang tidak habitable',
                         textAlign: TextAlign.center,
                         style: AppFont.whiteTextStyle.copyWith(
-                            fontSize: 20.sp,
+                            fontSize: 20,
                             fontWeight: AppFont.light,
                             color: AppColor.white.withOpacity(0.5)),
                       ),

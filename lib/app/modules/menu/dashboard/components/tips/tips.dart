@@ -15,7 +15,7 @@ class Tips extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(24, 24, 12, 0),
           child: Text(
             'Tips & Guidance',
-            style: AppFont.blackTextStyle.copyWith(fontSize: 16.sp),
+            style: AppFont.blackTextStyle.copyWith(fontSize: 16),
           ),
         ),
         16.0.height,
