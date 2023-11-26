@@ -41,37 +41,42 @@ class SplashScreenContent extends StatelessWidget {
       );
     }
 
-    Widget webView({required BoxConstraints constraint}) {
-      List<Widget> listWidget = [
-        30.0.height,
-        Image.asset(
-          ImageString.iconCozy,
-          height: 50,
-          width: 50,
-        ),
-        30.0.height,
-        Text(
-          'Find Cozy House\nto Stay and Happy',
-          style: AppFont.blackTextStyle.copyWith(
-            fontSize: 24,
-            fontWeight: AppFont.semiBold,
+    Widget webView({required BoxConstraints constraints}) {
+      List<Widget> listWidget(BoxConstraints constraint) {
+        return [
+          30.0.height,
+          Image.asset(
+            ImageString.iconCozy,
+            height: 50,
+            width: 50,
           ),
-        ),
-        10.0.height,
-        Text(
-          'Stop membuang banyak waktu\npada tempat yang tidak habitable',
-          style: AppFont.grey2TextStyle,
-        ),
-        CustomButton(
-          width: 100.w,
-          margin: const EdgeInsets.only(top: 40),
-          isLoading: false,
-          func: () => Navigator.pushNamed(context, '/main-page'),
-          text: 'Explore Now',
-          btnStyle: AppButtonStyle.btnMain,
-          fontWeight: AppFont.medium,
-        ),
-      ];
+          30.0.height,
+          Text(
+            'Find Cozy House\nto Stay and Happy',
+            style: AppFont.blackTextStyle.copyWith(
+              fontSize: 24,
+              fontWeight: AppFont.semiBold,
+            ),
+          ),
+          10.0.height,
+          Text(
+            'Stop membuang banyak waktu\npada tempat yang tidak habitable',
+            style: AppFont.grey2TextStyle,
+          ),
+          constraints.maxHeight <= 400
+              ? const SizedBox.shrink()
+              : CustomButton(
+                  width: 100.w,
+                  margin: const EdgeInsets.only(top: 40),
+                  isLoading: false,
+                  func: () => Navigator.pushNamed(context, '/main-page'),
+                  text: 'Explore Now',
+                  btnStyle: AppButtonStyle.btnMain,
+                  fontWeight: AppFont.medium,
+                ),
+        ];
+      }
+
       return Center(
         child: Container(
           padding: const EdgeInsets.all(20),
@@ -87,17 +92,30 @@ class SplashScreenContent extends StatelessWidget {
               ),
             ],
           ),
-          child: constraint.maxHeight <= 400
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: listWidget,
+          child: constraints.maxHeight <= 400
+              ? Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: listWidget(constraints),
+                    ),
+                    CustomButton(
+                      width: 100.w,
+                      margin: const EdgeInsets.only(top: 40),
+                      isLoading: false,
+                      func: () => Navigator.pushNamed(context, '/main-page'),
+                      text: 'Explore Now',
+                      btnStyle: AppButtonStyle.btnMain,
+                      fontWeight: AppFont.medium,
+                    ),
+                  ],
                 )
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
-                  children: listWidget,
+                  children: listWidget(constraints),
                 ),
         ),
       );
@@ -112,7 +130,7 @@ class SplashScreenContent extends StatelessWidget {
             if (constraint.maxWidth <= 700) {
               return mobileView();
             } else {
-              return webView(constraint: constraint);
+              return webView(constraints: constraint);
             }
           },
         ),
