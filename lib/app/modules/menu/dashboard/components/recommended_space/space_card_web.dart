@@ -62,83 +62,87 @@ class SpaceCardWeb extends StatelessWidget {
       );
     }
 
-    return GestureDetector(
-      onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => SpaceDetail(space: space),
-          )),
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
-        decoration: BoxDecoration(
-          color: AppColor.white,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: AppColor.grey1.withOpacity(0.5),
+    return LayoutBuilder(builder: (context, constraint) {
+      return GestureDetector(
+        onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SpaceDetail(space: space),
+            )),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(22, 22, 22, 0),
+          decoration: BoxDecoration(
+            color: AppColor.white,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: AppColor.grey1.withOpacity(0.5),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 0,
+                blurRadius: 12,
+                offset: const Offset(0, 4),
+              ),
+            ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
-              spreadRadius: 0,
-              blurRadius: 12,
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            image(),
-            13.0.height,
-            Text(
-              space.name.toTitleCase(),
-              style: AppFont.blackTextStyle.copyWith(
-                fontWeight: AppFont.medium,
-                fontSize: 18,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              constraint.maxHeight <= 400 ? SizedBox.shrink() : image(),
+              13.0.height,
+              Text(
+                space.name.toTitleCase(),
+                style: AppFont.blackTextStyle.copyWith(
+                  fontWeight: AppFont.medium,
+                  fontSize: 18,
+                ),
               ),
-            ),
-            2.0.height,
-            Text(
-              '${space.city}, ${space.country}',
-              style: AppFont.greyTextStyle.copyWith(
-                fontSize: 16,
+              2.0.height,
+              Text(
+                '${space.city}, ${space.country}',
+                style: AppFont.greyTextStyle.copyWith(
+                  fontSize: 16,
+                ),
               ),
-            ),
-            11.0.height,
-            Text.rich(
-              TextSpan(
-                  text: '\$${space.price}',
-                  style: AppFont.purpleTextStyle.copyWith(
-                    fontSize: 16,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: ' / month',
-                      style: AppFont.greyTextStyle.copyWith(
-                        fontSize: 16,
-                      ),
+              11.0.height,
+              Text.rich(
+                TextSpan(
+                    text: '\$${space.price}',
+                    style: AppFont.purpleTextStyle.copyWith(
+                      fontSize: 16,
                     ),
-                  ]),
-            ),
-            18.0.height,
-            SizedBox(
-              height: AppDimen.wMediaquery * 0.04,
-              child: CustomButton(
-                isLoading: false,
-                func: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SpaceDetail(space: space),
-                    )),
-                text: 'Book now',
-                fontSize: 14,
-                btnStyle: AppButtonStyle.btnMain,
+                    children: [
+                      TextSpan(
+                        text: ' / month',
+                        style: AppFont.greyTextStyle.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ]),
               ),
-            )
-          ],
+              18.0.height,
+              constraint.maxHeight <= 400
+                  ? const SizedBox.shrink()
+                  : SizedBox(
+                      height: AppDimen.wMediaquery * 0.04,
+                      child: CustomButton(
+                        isLoading: false,
+                        func: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SpaceDetail(space: space),
+                            )),
+                        text: 'Book now',
+                        fontSize: 14,
+                        btnStyle: AppButtonStyle.btnMain,
+                      ),
+                    )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

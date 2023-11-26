@@ -48,9 +48,7 @@ class RecommendedSpace extends StatelessWidget {
                   crossAxisCount: (constraint.maxWidth <= 1200) ? 2 : 3,
                   crossAxisSpacing: 60,
                   mainAxisSpacing: 24,
-                  childAspectRatio: (constraint.maxWidth <= 1200)
-                      ? AppDimen.wMediaquery / (AppDimen.hMediaquery / 0.74)
-                      : AppDimen.wMediaquery / (AppDimen.hMediaquery / 0.47),
+                  childAspectRatio: 0.86,
                   primary: false,
                   children: [
                     ...SpaceModel.listSpaces

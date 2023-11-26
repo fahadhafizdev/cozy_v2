@@ -317,32 +317,29 @@ class SpaceDetail extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Column(
-              children: [
-                100.0.height,
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.vertical(
-                      top: Radius.circular(20),
-                    ),
-                    color: AppColor.white,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      30.0.height,
-                      headerCard(),
-                      30.0.height,
-                      mainFacility(),
-                      photoPreview(),
-                      location(),
-                      btnBook(),
-                      40.0.height,
-                    ],
-                  ),
-                )
-              ],
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(20),
+                ),
+                color: AppColor.white,
+              ),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    30.0.height,
+                    headerCard(),
+                    30.0.height,
+                    mainFacility(),
+                    photoPreview(),
+                    location(),
+                    btnBook(),
+                    40.0.height,
+                  ],
+                ),
+              ),
             ),
           ),
         ],
