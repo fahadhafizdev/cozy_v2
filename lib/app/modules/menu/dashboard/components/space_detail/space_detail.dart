@@ -51,32 +51,34 @@ class SpaceDetail extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  space.name,
-                  style: AppFont.blackTextStyle.copyWith(
-                    fontSize: 22,
-                  ),
-                ),
-                Text.rich(
-                  TextSpan(
-                    text: '\$${space.price} ',
-                    style: AppFont.purpleTextStyle.copyWith(
-                      fontSize: 16,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    space.name,
+                    style: AppFont.blackTextStyle.copyWith(
+                      fontSize: 22,
                     ),
-                    children: [
-                      TextSpan(
-                        text: '/ month',
-                        style: AppFont.greyTextStyle.copyWith(
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
                   ),
-                )
-              ],
+                  Text.rich(
+                    TextSpan(
+                      text: '\$${space.price} ',
+                      style: AppFont.purpleTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: '/ month',
+                          style: AppFont.greyTextStyle.copyWith(
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
             Row(
               children: [1, 2, 3, 4, 5].map((item) {
@@ -196,23 +198,25 @@ class SpaceDetail extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      space.address,
-                      style: AppFont.greyTextStyle.copyWith(
-                        fontSize: 14,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        space.address,
+                        style: AppFont.greyTextStyle.copyWith(
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                    2.0.height,
-                    Text(
-                      space.city,
-                      style: AppFont.greyTextStyle.copyWith(
-                        fontSize: 14,
-                      ),
-                    )
-                  ],
+                      2.0.height,
+                      Text(
+                        space.city,
+                        style: AppFont.greyTextStyle.copyWith(
+                          fontSize: 14,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 GestureDetector(
                   onTap: () {
